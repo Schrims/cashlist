@@ -15,7 +15,7 @@
 
       <!-- .toolbar-header sits at the top of your app -->
       <header class="toolbar toolbar-header">
-        <h1 class="title">Photon</h1>
+        <h1 class="title">Cashlist</h1>
       </header>
 
       <!-- Your app's content goes inside .window-content -->
@@ -23,41 +23,19 @@
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <nav class="nav-group">
-              <h5 id="nav-group" class="nav-group-title">Favorites</h5>
+              <h5 id="nav-group" class="nav-group-title">Listen</h5>
               <span id="nav-home" class="nav-group-item active">
-                <span class="icon icon-home"></span>
-                Übersicht
+                <span class="icon icon-basket"></span>
+                Einkaufen
               </span>
               <span id="nav-light" class="nav-group-item">
-                <span class="icon icon-light-up"></span>
-                Übersicht
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-download"></span>
-                Übersicht
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-folder"></span>
-                Übersicht
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-window"></span>
-                Übersicht
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-signal"></span>
-                Übersicht
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Übersicht
+                <span class="icon icon-infinity"></span>
+                Sonstiges
               </span>
             </nav>
           </div>
-
           <div class="pane">
-
-            <table class="table-striped">
+            <table id="table" class="table-striped">
               <thead>
                 <tr>
                   <th><input id="input" name="name" value="name"></th>
@@ -67,19 +45,7 @@
                   <th><button onclick="addLine()">+</button></th>
                 </tr>
               </thead>
-              <tbody id="table">
-                <tr>
-                  <td>bars.scss</td>
-                  <td>Document</td>
-                  <td>Oct 13, 2015</td>
-                  <td>Schrims</td>
-                </tr>
-                <tr>
-                  <td>base.scss</td>
-                  <td>Document</td>
-                  <td>Oct 13, 2015</td>
-                  <td>Schrims</td>
-                </tr>
+              <tbody id="tablebody">
               </tbody>
             </table>
           </div>

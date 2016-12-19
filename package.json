@@ -34,7 +34,8 @@
     }
   },
   "dependencies": {
-    "electron-compile": "^4.0.3"
+    "electron-compile": "^4.0.3",
+    "electron-json-storage": "^2.1.0"
   },
   "devDependencies": {
     "babel-preset-stage-0": "^6.16.0",

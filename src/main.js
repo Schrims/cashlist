@@ -4,7 +4,7 @@ let mainWindow;
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 800,
+    width: 960,
     height: 500,
     'min-width': 500,
     'min-height': 200,
