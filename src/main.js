@@ -1,38 +1,41 @@
-import { app, BrowserWindow } from 'electron';
+import {
+    app,
+    BrowserWindow
+} from 'electron';
 
 let mainWindow;
 
 const createWindow = () => {
-  mainWindow = new BrowserWindow({
-    width: 960,
-    height: 500,
-    'min-width': 500,
-    'min-height': 200,
-    'accept-first-mouse': true,
-    'title-bar-style': 'hidden',
-    frame: false,
-    transparent: true,
-  });
+    mainWindow = new BrowserWindow({
+        width: 960,
+        height: 500,
+        'min-width': 500,
+        'min-height': 200,
+        'accept-first-mouse': true,
+        'title-bar-style': 'hidden',
+        frame: false,
+        transparent: true,
+    });
 
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
+    mainWindow.loadURL(`file://${__dirname}/index.html`);
 
-  // mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
-  mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
+    mainWindow.on('closed', () => {
+        mainWindow = null;
+    });
 };
 
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
 
 app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow();
-  }
+    if (mainWindow === null) {
+        createWindow();
+    }
 });
